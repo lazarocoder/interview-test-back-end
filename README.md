@@ -135,7 +135,7 @@ o	Melhorar mecanismos de tratamento de exceções para gerenciar diferentes tipo
 2.	Aprimoramentos de Segurança:
 o	Considerar a implementação de mecanismos de autenticação e autorização mais robustos, Utiliza certificados digitais para autenticar usuários e dispositivos.
 3.	Documentação da API:
-o	Expandir a documentação da API para incluir descrições detalhadas de todos os endpoints, parâmetros e formatos de resposta.
+o	Expandir a documentação da API para incluir descrições detalhadas de todos os Endpoints, parâmetros e formatos de resposta.
 4.	Testes:
 o	Aumentar a cobertura dos testes, especialmente para a lógica de negócios crítica e recursos de segurança.
 o	Melhorar testes de integração para garantir que diferentes componentes da aplicação funcionem juntos conforme esperado.
@@ -147,7 +147,7 @@ o	Melhorar a aplicação com uma maior escalabilidade em mente, garantindo que e
 o	Utilizar ferramentas de orquestração de contêineres, como Kubernetes, para gerenciar e escalar a aplicação.
 7.	Qualidade do Código:
 o	Refatorar o código para melhorar a legibilidade, manutenibilidade e aderência às melhores práticas.
-o	Implementar ferramentas de análise estática de código para identificar e corrigir possíveis problemas cedo no processo de desenvolvimento.
+o	Implementar ferramentas de análise estática de código para identificar e corrigir possíveis problemas cedo no processo de desenvolvimento e realizar tratamentos de datas e serialização, incluir `´Handler para tratamento de responses´`. 
 
 
 
