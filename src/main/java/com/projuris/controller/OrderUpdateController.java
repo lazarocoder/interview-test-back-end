@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "api/orders/{orderId}/updates", produces = {"application/json"}  )
-    @Tag(name = "Controller of the order and update")
+    @Tag(name = "Projuris - Controller of the order and update")
 @ApiResponses(value = {
         @ApiResponse(responseCode = "400", description = "Bad Request"),
         @ApiResponse(responseCode = "401", description = "Unauthorized"),

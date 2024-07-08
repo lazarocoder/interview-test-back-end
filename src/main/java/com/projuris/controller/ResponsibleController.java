@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "api/responsibles", produces = {"application/json"}  )
-@Tag(name = "Controller for the responsibles ")
+@Tag(name = "Projuris - Controller for the responsibles ")
 @ApiResponses(value = {
         @ApiResponse(responseCode = "400", description = "Bad Request"),
         @ApiResponse(responseCode = "401", description = "Unauthorized"),

@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/api/auth", produces = {"application/json"} )
-@Tag(name = " Controller for auth")
+@Tag(name = " Projuris - Controller for auth")
 @ApiResponses(value = {
         @ApiResponse(responseCode = "400", description = "Bad Request"),
         @ApiResponse(responseCode = "401", description = "Unauthorized"),
@@ -51,7 +51,7 @@ public class AuthController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @Operation(method = "POST", summary = "Register a user", description = "Register a user.")
+    @Operation(method = "POST", summary = "Login in a user", description = "Login in a user.")
     @ApiResponse(responseCode = "201", description = "CREATED")
     @PostMapping("/login")
     public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) {
