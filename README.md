@@ -72,6 +72,9 @@ A aplicação utiliza "JTW token para autenticação", requerendo que o usuário
 - **Model**
   - Foco: Modelos de Dados.
   - Detalhes: Representam as entidades do domínio da aplicação, mapeadas para tabelas no banco de dados.
+ 
+    ![image](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/a6b8d398-22dd-4d30-9218-f488b9676383)
+
 - **Security**
   - Foco: Configurações e Implementações de Segurança.
   - Detalhes: Gerencia aspectos de segurança da aplicação, como autenticação e autorização.
