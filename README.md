@@ -25,7 +25,7 @@ A aplicação utiliza "JTW token para autenticação", requerendo que o usuário
 3. Após a conclusão do download das dependências, execute as tarefas “maven clean” e, em seguida, “maven install” para garantir uma compilação limpa e a instalação dos artefatos.
    - Em caso de erros durante o download dos artefatos, execute: `mvn dependency:purge-local-repository install`
 4. Navegue até a pasta profiles, para iniciar o container, execute no seu terminal: `docker-compose up`. Para executar em segundo plano, adicione a flag `-d`: `docker-compose up -d`.
-5. Navegue até a classe principal da aplicação, `ProjurisBackendInterviewApi1Application.java`, e inicie a aplicação.
+5. Navegue até a classe principal da aplicação, `ProjurisBackendInterviewApiApplication.java`, e inicie a aplicação.
 6. Abra seu navegador e acesse: http://localhost:8080/swagger-ui/index.html para visualizar a documentação interativa (Swagger) da API.
 
 ## Dados de acesso do authentication no swagger
