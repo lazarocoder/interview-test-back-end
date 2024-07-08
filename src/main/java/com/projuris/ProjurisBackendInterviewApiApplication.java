@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjurisBackendInterviewApi1Application {
+public class ProjurisBackendInterviewApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjurisBackendInterviewApi1Application.class, args);
+		SpringApplication.run(ProjurisBackendInterviewApiApplication.class, args);
 	}
 
 }
