@@ -130,24 +130,24 @@ Segue os resultados da cobertura de testes. Para executar os testes, basta acess
 
 ## Observações e Sugestões de Melhorias para implementar
 1.	Tratamento de Erros:
-o	Implementar um tratamento abrangente de erros em toda a API para garantir que mensagens de erro significativas sejam retornadas ao cliente.
-o	Melhorar mecanismos de tratamento de exceções para gerenciar diferentes tipos de erros, como erros de validação, erros de banco de dados e erros de autenticação/autorização.
+-	Implementar um tratamento abrangente de erros em toda a API para garantir que mensagens de erro significativas sejam retornadas ao cliente.
+-	Melhorar mecanismos de tratamento de exceções para gerenciar diferentes tipos de erros, como erros de validação, erros de banco de dados e erros de autenticação/autorização.
 2.	Aprimoramentos de Segurança:
-o	Considerar a implementação de mecanismos de autenticação e autorização mais robustos, Utiliza certificados digitais para autenticar usuários e dispositivos.
+-	Considerar a implementação de mecanismos de autenticação e autorização mais robustos, Utiliza certificados digitais para autenticar usuários e dispositivos.
 3.	Documentação da API:
-o	Expandir a documentação da API para incluir descrições detalhadas de todos os Endpoints, parâmetros e formatos de resposta.
+-	Expandir a documentação da API para incluir descrições detalhadas de todos os Endpoints, parâmetros e formatos de resposta.
 4.	Testes:
-o	Aumentar a cobertura dos testes, especialmente para a lógica de negócios crítica e recursos de segurança.
-o	Melhorar testes de integração para garantir que diferentes componentes da aplicação funcionem juntos conforme esperado.
+-	Aumentar a cobertura dos testes, especialmente para a lógica de negócios crítica e recursos de segurança.
+-	Melhorar testes de integração para garantir que diferentes componentes da aplicação funcionem juntos conforme esperado.
 5.	Otimização de Desempenho:
-o	Analisar e otimizar as consultas ao banco de dados para reduzir a latência e melhorar o desempenho.
-o	Considerar a implementação de estratégias de cache para dados frequentemente acessados.
+-	Analisar e otimizar as consultas ao banco de dados para reduzir a latência e melhorar o desempenho.
+-	Considerar a implementação de estratégias de cache para dados frequentemente acessados.
 6.	Escalabilidade:
-o	Melhorar a aplicação com uma maior escalabilidade em mente, garantindo que ela possa lidar com o aumento da carga à medida que a base de usuários cresce.
-o	Utilizar ferramentas de orquestração de contêineres, como Kubernetes, para gerenciar e escalar a aplicação.
+-	Melhorar a aplicação com uma maior escalabilidade em mente, garantindo que ela possa lidar com o aumento da carga à medida que a base de usuários cresce.
+-	Utilizar ferramentas de orquestração de contêineres, como Kubernetes, para gerenciar e escalar a aplicação.
 7.	Qualidade do Código:
-o	Refatorar o código para melhorar a legibilidade, manutenibilidade e aderência às melhores práticas.
-o	Implementar ferramentas de análise estática de código para identificar e corrigir possíveis problemas cedo no processo de desenvolvimento e realizar tratamentos de datas e serialização, incluir `´Handler para tratamento de responses´`. 
+-	Refatorar o código para melhorar a legibilidade, manutenibilidade e aderência às melhores práticas.
+-	Implementar ferramentas de análise estática de código para identificar e corrigir possíveis problemas cedo no processo de desenvolvimento e realizar tratamentos de datas e serialização, incluir `´Handler para tratamento de responses´`. 
 
 
 
