@@ -30,6 +30,17 @@ A aplicação utiliza "JTW token para autenticação", requerendo que o usuário
 
 ## Dados de acesso do authentication no swagger
 
+1. Para realização de requests na API via swagger, faz se necessário uma autenticação antes, onde um usuário é cadastrado no seguintes endpoints:
+
+![image](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/cf4b045b-42a4-4d12-97fd-2329208a3e87)
+
+2. Cadastrar:
+ ![image](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/6d7ccba4-c51e-45b7-a163-7e6ea6847791)
+
+3. Realizar login:
+
+![image](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/a1acb918-6be2-4cb5-b2ff-d9f46420279c)
+
 
 ## Principais dependências utilizadas
 
@@ -122,8 +133,7 @@ Segue os resultados da cobertura de testes. Para executar os testes, basta acess
 o	Implementar um tratamento abrangente de erros em toda a API para garantir que mensagens de erro significativas sejam retornadas ao cliente.
 o	Melhorar mecanismos de tratamento de exceções para gerenciar diferentes tipos de erros, como erros de validação, erros de banco de dados e erros de autenticação/autorização.
 2.	Aprimoramentos de Segurança:
-o	Considerar a implementação de mecanismos de autenticação e autorização mais robustos, como OAuth2 ou JWT, pois a segurança hoje é básica.
-o	Garantir que dados sensíveis, como senhas, sejam criptografados e armazenados de forma segura.
+o	Considerar a implementação de mecanismos de autenticação e autorização mais robustos, Utiliza certificados digitais para autenticar usuários e dispositivos.
 3.	Documentação da API:
 o	Expandir a documentação da API para incluir descrições detalhadas de todos os endpoints, parâmetros e formatos de resposta.
 4.	Testes:
