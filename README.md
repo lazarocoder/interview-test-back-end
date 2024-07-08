@@ -74,9 +74,46 @@ A aplicação utiliza "JTW token para autenticação", requerendo que o usuário
 ## Dos testes unitários
 
 Segue os resultados da cobertura de testes. Para executar os testes, basta acessar a pasta raiz do projeto e clicar na opção "Run with coverage".
+![image](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/a2b3da85-df54-42a2-967c-e120f729bbd5)
+
 
 
 ## Evidências de alguns testes no ambiente local:
+
+
+
+![evidencia 01](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/3aad7511-db32-42ec-ae9c-7e5d0f5aaebd)
+
+
+
+![evidencia  02](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/3a60fd20-9991-45b8-9f41-d063b108f9da)
+
+![evidencia 03](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/2a65d942-7d21-40cb-84f3-2b05bb966b9b)
+
+
+![evidencia 04](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/82418a69-d82c-4962-b53a-6c574e579012)
+
+![evidencia 05](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/9334f3b2-b7e3-49f4-a0a8-ddc1183cbe3b)
+
+
+![evidencia 06](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/bc61c8a7-1fb1-4977-a346-b00878b3edd5)
+
+![evidencia 07](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/9815008e-f4e3-48a0-95f9-6dd6f1fb8db9)
+
+![evidencia 08](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/ece7df28-5db9-48d9-90c4-097676b342ac)
+
+![evidencia 09](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/4a9fbeb2-1a5c-4bfa-9b49-154f6dab4faf)
+
+![evidencia 10](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/084f238a-2dcb-4e02-bb39-be4286b225e3)
+
+![evidencia 11](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/9560125a-fc85-43b9-8fd6-eecfb0add35f)
+
+![evidencia 12](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/6264b4ae-9bde-4e0d-ac32-97394c78efd6)
+
+![evidencia 13](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/414ce4a2-8e9a-4f71-b89c-2532a87f5d2b)
+
+![evidencia 14](https://github.com/lazarocoder/interview-test-back-end/assets/63754729/a88bdefe-4398-4f91-90c6-448ee43372d2)
+
 
 
 
