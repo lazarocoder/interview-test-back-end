@@ -1,6 +1,6 @@
 # Tradução do READ.ME
 
-[![Traduzir para Inglês](https://img.shields.io/badge/traduzir-Google%20Translate-blue)](https://translate.google.com/translate?sl=auto&tl=en&u=https://github.com/lazarocoder/interview-back-end)
+[![Traduzir para Inglês](https://img.shields.io/badge/traduzir-Google%20Translate-blue)](https://translate.google.com/translate?sl=auto&tl=en&u=https://github.com/lazarocoder/interview-test-back-end)
 
 # Introdução
 
