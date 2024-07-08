@@ -6,19 +6,18 @@ import com.projuris.model.Order;
 import com.projuris.model.OrderUpdate;
 import com.projuris.repository.OrderRepository;
 import com.projuris.repository.OrderUpdateRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
+@RequiredArgsConstructor
 @Service
 public class OrderUpdateService {
 
-    @Autowired
-    private OrderUpdateRepository orderUpdateRepository;
+    private final OrderUpdateRepository orderUpdateRepository;
 
-    @Autowired
-    private OrderRepository orderRepository;
+    private final OrderRepository orderRepository;
 
     public OrderUpdateDTO createOrderUpdate(Long orderId, OrderUpdateDTO orderUpdateDTO) {
         Order order = orderRepository.findById(orderId)

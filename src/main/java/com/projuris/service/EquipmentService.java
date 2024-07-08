@@ -4,17 +4,18 @@ import com.projuris.dto.EquipmentDTO;
 import com.projuris.exception.EntityException;
 import com.projuris.model.Equipment;
 import com.projuris.repository.EquipmentRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@RequiredArgsConstructor
 @Service
 public class EquipmentService {
 
-    @Autowired
-    private EquipmentRepository equipmentRepository;
+
+    private final EquipmentRepository equipmentRepository;
 
     public EquipmentDTO createEquipment(EquipmentDTO equipmentDTO) {
         try {

@@ -8,7 +8,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,8 +31,8 @@ import java.util.List;
 })
 public class ClientController {
 
-    @Autowired
-    private ClientService clientService;
+
+    private final ClientService clientService;
 
     @Operation(method = "POST", summary = "Register a customer", description = "Register a customer.")
     @ApiResponse(responseCode = "201", description = "CREATED")

@@ -6,8 +6,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 @Log
+@RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "api/reports", produces = {"application/json"}  )
 @Tag(name = "Controller of the reports")
@@ -32,8 +33,8 @@ import java.util.List;
 })
 public class OrderReportController {
 
-    @Autowired
-    private OrderReportService orderReportService;
+
+    private final OrderReportService orderReportService;
 
     @Operation(method = "GET", summary = "Searching the reports", description = "Searching the reports.")
     @ApiResponse(responseCode = "200", description = "OK")

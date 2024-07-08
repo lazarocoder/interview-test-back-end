@@ -3,18 +3,19 @@ package com.projuris.service;
 import com.projuris.dto.OrderReportDTO;
 import com.projuris.model.Order;
 import com.projuris.repository.OrderRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@RequiredArgsConstructor
 @Service
 public class OrderReportService {
 
 
-    @Autowired
-    private OrderRepository orderRepository;
+
+    private final OrderRepository orderRepository;
 
     public List<OrderReportDTO> getOrderReport() {
         List<Order> orders = orderRepository.findAll();

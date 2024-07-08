@@ -10,8 +10,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @Log
+@RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/api/auth", produces = {"application/json"} )
 @Tag(name = " Controller for auth")
@@ -37,8 +38,9 @@ import org.springframework.web.bind.annotation.RestController;
 })
 public class AuthController {
 
-    @Autowired
-    private AuthService authService;
+
+    private final AuthService authService;
+
 
     @Operation(method = "POST", summary = "Register a user", description = "Register a user.")
     @ApiResponse(responseCode = "201", description = "CREATED")

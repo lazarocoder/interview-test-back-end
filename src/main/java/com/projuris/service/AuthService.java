@@ -1,8 +1,11 @@
 package com.projuris.service;
 
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.projuris.model.LoginRequest;
+import com.projuris.model.RegisterRequest;
+import com.projuris.model.User;
+import com.projuris.repository.UserRepository;
+import com.projuris.security.JwtProvider;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -10,26 +13,23 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.projuris.model.LoginRequest;
-import com.projuris.model.RegisterRequest;
-import com.projuris.model.User;
-import com.projuris.repository.UserRepository;
-import com.projuris.security.JwtProvider;
+import java.util.Optional;
 
+@RequiredArgsConstructor
 @Service
 public class AuthService {
 
-    @Autowired
-    private UserRepository userRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+    private final UserRepository userRepository;
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
 
-    @Autowired
-    private JwtProvider jwtProvider;
+    private final PasswordEncoder passwordEncoder;
+
+
+    private final AuthenticationManager authenticationManager;
+
+
+    private final JwtProvider jwtProvider;
 
     public void signup(RegisterRequest registerRequest) {
         User user = new User();

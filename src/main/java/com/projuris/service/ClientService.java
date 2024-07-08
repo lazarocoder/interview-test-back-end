@@ -4,17 +4,18 @@ import com.projuris.dto.ClientDTO;
 import com.projuris.exception.EntityException;
 import com.projuris.model.Client;
 import com.projuris.repository.ClientRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@RequiredArgsConstructor
 @Service
 public class ClientService {
 
-    @Autowired
-    private ClientRepository clientRepository;
+
+    private final ClientRepository clientRepository;
 
     public ClientDTO createClient(ClientDTO clientDTO) {
         try {

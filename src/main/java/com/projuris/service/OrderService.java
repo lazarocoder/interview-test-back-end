@@ -10,26 +10,24 @@ import com.projuris.repository.ClientRepository;
 import com.projuris.repository.EquipmentRepository;
 import com.projuris.repository.OrderRepository;
 import com.projuris.repository.ResponsibleRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@RequiredArgsConstructor
 @Service
 public class OrderService {
 
-    @Autowired
-    private OrderRepository orderRepository;
 
-    @Autowired
-    private ClientRepository clientRepository;
+    private final OrderRepository orderRepository;
 
-    @Autowired
-    private EquipmentRepository equipmentRepository;
+    private final ClientRepository clientRepository;
 
-    @Autowired
-    private ResponsibleRepository responsibleRepository;
+    private final EquipmentRepository equipmentRepository;
+
+    private final ResponsibleRepository responsibleRepository;
 
     public OrderDTO createOrder(OrderDTO orderDTO) {
         Order order = new Order();

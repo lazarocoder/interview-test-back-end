@@ -4,17 +4,18 @@ import com.projuris.dto.ResponsibleDTO;
 import com.projuris.exception.EntityException;
 import com.projuris.model.Responsible;
 import com.projuris.repository.ResponsibleRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@RequiredArgsConstructor
 @Service
 public class ResponsibleService {
 
-    @Autowired
-    private ResponsibleRepository responsibleRepository;
+    private final ResponsibleRepository responsibleRepository;
 
     public ResponsibleDTO createResponsible(ResponsibleDTO responsibleDTO) {
         try {
