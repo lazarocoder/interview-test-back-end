@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 public class OrderReportDTO {
     private Long orderId;
     private String orderDescription;
+    private String solutionDetails;
     private LocalDateTime orderStartDate;
     private LocalDateTime orderEndDate;
     private String clientName;

@@ -25,6 +25,7 @@ public class OrderReportService {
                     OrderReportDTO dto = new OrderReportDTO();
                     dto.setOrderId(order.getId());
                     dto.setOrderDescription(order.getDescription());
+                    dto.setSolutionDetails(order.getSolutionDetails());
                     dto.setOrderStartDate(order.getStartDate().atStartOfDay());
                     dto.setOrderEndDate(order.getEndDate().atStartOfDay());
                     dto.setClientName(order.getClient().getName());
@@ -42,6 +43,7 @@ public class OrderReportService {
         OrderReportDTO dto = new OrderReportDTO();
         dto.setOrderId(order.getId());
         dto.setOrderDescription(order.getDescription());
+        dto.setSolutionDetails(order.getSolutionDetails());
         dto.setOrderStartDate(order.getStartDate().atStartOfDay());
         dto.setOrderEndDate(order.getEndDate().atStartOfDay());
         dto.setClientName(order.getClient().getName());
