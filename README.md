@@ -20,7 +20,7 @@ A aplicação utiliza "JTW token para autenticação", requerendo que o usuário
 
 ## Como iniciar o projeto
 
-1. Abra a IDE de sua preferência e carregue o projeto “projuris-backend-interview-api”.
+1. Abra a IDE de sua preferência e carregue o projeto “interview-test-back-end”.
 2. Aguarde até que todas as dependências sejam resolvidas e baixadas automaticamente.
 3. Após a conclusão do download das dependências, execute as tarefas “maven clean” e, em seguida, “maven install” para garantir uma compilação limpa e a instalação dos artefatos.
    - Em caso de erros durante o download dos artefatos, execute: `mvn dependency:purge-local-repository install`
