@@ -7,11 +7,9 @@ import lombok.Setter;
 @Getter
 public class ResponsibleDTO {
 
+    private Long id;
     private String name;
 
-    public ResponsibleDTO(Long id, String name) {
-
-        this.name = name;
-    }
+    public ResponsibleDTO() {}
 
 }

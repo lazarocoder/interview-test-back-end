@@ -14,11 +14,8 @@ public class OrderUpdateDTO {
     private LocalDateTime timestamp;
     private OrderUpdateType type;
 
-    public OrderUpdateDTO(Long id, String description, LocalDateTime timestamp, OrderUpdateType type) {
-        this.id = id;
-        this.description = description;
-        this.timestamp = timestamp;
-        this.type = type;
-    }
+   public OrderUpdateDTO(){
+
+   }
 
 }

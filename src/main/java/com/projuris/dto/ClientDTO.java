@@ -12,12 +12,6 @@ public class ClientDTO {
     private String phone;
     private String email;
 
-    public ClientDTO() {
-
-        this.name = name;
-        this.address = address;
-        this.phone = phone;
-        this.email = email;
-    }
+    public ClientDTO() {}
 
 }

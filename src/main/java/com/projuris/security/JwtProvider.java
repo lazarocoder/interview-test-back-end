@@ -9,7 +9,7 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
-import com.projuris.exception.BaseException;
+import com.projuris.exception.BasicException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -33,7 +33,7 @@ public class JwtProvider {
             InputStream resourceAsStream = getClass().getResourceAsStream("/projuris-advocacia.jks");
             keyStore.load(resourceAsStream, "123456".toCharArray());
         } catch (KeyStoreException | CertificateException | NoSuchAlgorithmException | IOException e) {
-            throw new BaseException("Exception occured while loading keystore");
+            throw new BasicException("Exception occured while loading keystore");
         }
 
     }
@@ -47,7 +47,7 @@ public class JwtProvider {
         try {
             return (PrivateKey) keyStore.getKey(PROJURIS_ADVOCACIA, "123456".toCharArray());
         } catch (KeyStoreException | NoSuchAlgorithmException | UnrecoverableKeyException e) {
-            throw new BaseException("Exception occured while retrieving public key from keystore");
+            throw new BasicException("Exception occured while retrieving public key from keystore");
         }
     }
 
@@ -60,7 +60,7 @@ public class JwtProvider {
         try {
             return keyStore.getCertificate(PROJURIS_ADVOCACIA).getPublicKey();
         } catch (KeyStoreException e) {
-            throw new BaseException("Exception occured while retrieving public key from keystore");
+            throw new BasicException("Exception occured while retrieving public key from keystore");
         }
     }
 

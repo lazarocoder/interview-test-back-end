@@ -10,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class OrderUpdateService {
@@ -25,28 +23,24 @@ public class OrderUpdateService {
     public OrderUpdateDTO createOrderUpdate(Long orderId, OrderUpdateDTO orderUpdateDTO) {
         Order order = orderRepository.findById(orderId)
                 .orElseThrow(() -> new EntityException("Order not found with id " + orderId));
-        OrderUpdate orderUpdate = new OrderUpdate(
-                orderUpdateDTO.getDescription(),
-                LocalDateTime.now(),
-                orderUpdateDTO.getType(),
-                order
-        );
+
+        OrderUpdate orderUpdate = new OrderUpdate();
+        orderUpdate.setDescription(orderUpdateDTO.getDescription());
+        orderUpdate.setTimestamp(LocalDateTime.now());
+        orderUpdate.setType(orderUpdateDTO.getType());
+        orderUpdate.setOrder(order);
+
         OrderUpdate savedOrderUpdate = orderUpdateRepository.save(orderUpdate);
         return convertToDTO(savedOrderUpdate);
     }
 
-   /* public List<OrderUpdateDTO> getOrderUpdatesByOrderId(Long orderId) {
-        return orderUpdateRepository.findByOrderId(orderId).stream()
-                .map(this::convertToDTO)
-                .collect(Collectors.toList());
-    }*/
-
     private OrderUpdateDTO convertToDTO(OrderUpdate orderUpdate) {
-        return new OrderUpdateDTO(
-                orderUpdate.getId(),
-                orderUpdate.getDescription(),
-                orderUpdate.getTimestamp(),
-                orderUpdate.getType()
-        );
+        OrderUpdateDTO orderUpdateDTO = new OrderUpdateDTO();
+        orderUpdateDTO.setId(orderUpdate.getId());
+        orderUpdateDTO.setDescription(orderUpdate.getDescription());
+        orderUpdateDTO.setTimestamp(orderUpdate.getTimestamp());
+        orderUpdateDTO.setType(orderUpdate.getType());
+        return orderUpdateDTO;
     }
+
 }

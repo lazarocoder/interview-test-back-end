@@ -44,6 +44,10 @@ public class ResponsibleService {
     }
 
     private ResponsibleDTO convertToDTO(Responsible responsible) {
-        return new ResponsibleDTO(responsible.getId(), responsible.getName());
+        ResponsibleDTO dto = new ResponsibleDTO();
+        dto.setId(responsible.getId());
+        dto.setName(responsible.getName());
+        return dto;
     }
+
 }

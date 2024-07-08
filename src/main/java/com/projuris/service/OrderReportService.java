@@ -18,31 +18,37 @@ public class OrderReportService {
 
     public List<OrderReportDTO> getOrderReport() {
         List<Order> orders = orderRepository.findAll();
+
         return orders.stream()
-                .map(order -> new OrderReportDTO(
-                        order.getId(),
-                        order.getDescription(),
-                        order.getStartDate().atStartOfDay(),
-                        order.getEndDate().atStartOfDay(),
-                        order.getClient().getName(),
-                        order.getClient().getEmail(),
-                        order.getEquipment().getType(),
-                        order.getEquipment().getBrand(),
-                        order.getResponsible().getName()))
+                .map(order -> {
+                    OrderReportDTO dto = new OrderReportDTO();
+                    dto.setOrderId(order.getId());
+                    dto.setOrderDescription(order.getDescription());
+                    dto.setOrderStartDate(order.getStartDate().atStartOfDay());
+                    dto.setOrderEndDate(order.getEndDate().atStartOfDay());
+                    dto.setClientName(order.getClient().getName());
+                    dto.setClientEmail(order.getClient().getEmail());
+                    dto.setEquipmentType(order.getEquipment().getType());
+                    dto.setEquipmentBrand(order.getEquipment().getBrand());
+                    dto.setResponsibleName(order.getResponsible().getName());
+                    return dto;
+                })
                 .collect(Collectors.toList());
     }
 
+
     private OrderReportDTO convertToOrderReportDTO(Order order) {
-        return new OrderReportDTO(
-                order.getId(),
-                order.getDescription(),
-                order.getStartDate().atStartOfDay(),
-                order.getEndDate().atStartOfDay(),
-                order.getClient().getName(),
-                order.getClient().getEmail(),
-                order.getEquipment().getType(),
-                order.getEquipment().getBrand(),
-                order.getResponsible().getName()
-        );
+        OrderReportDTO dto = new OrderReportDTO();
+        dto.setOrderId(order.getId());
+        dto.setOrderDescription(order.getDescription());
+        dto.setOrderStartDate(order.getStartDate().atStartOfDay());
+        dto.setOrderEndDate(order.getEndDate().atStartOfDay());
+        dto.setClientName(order.getClient().getName());
+        dto.setClientEmail(order.getClient().getEmail());
+        dto.setEquipmentType(order.getEquipment().getType());
+        dto.setEquipmentBrand(order.getEquipment().getBrand());
+        dto.setResponsibleName(order.getResponsible().getName());
+        return dto;
     }
+
 }

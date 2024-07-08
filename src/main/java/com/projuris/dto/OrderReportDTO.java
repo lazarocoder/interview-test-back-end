@@ -18,18 +18,7 @@ public class OrderReportDTO {
     private String equipmentBrand;
     private String responsibleName;
 
-    public OrderReportDTO(Long orderId, String orderDescription, LocalDateTime orderStartDate, LocalDateTime orderEndDate,
-                          String clientName, String clientEmail, String equipmentType, String equipmentBrand,
-                          String responsibleName) {
-        this.orderId = orderId;
-        this.orderDescription = orderDescription;
-        this.orderStartDate = orderStartDate;
-        this.orderEndDate = orderEndDate;
-        this.clientName = clientName;
-        this.clientEmail = clientEmail;
-        this.equipmentType = equipmentType;
-        this.equipmentBrand = equipmentBrand;
-        this.responsibleName = responsibleName;
+    public OrderReportDTO() {
     }
 
 }

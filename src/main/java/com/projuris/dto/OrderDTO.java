@@ -17,15 +17,6 @@ public class OrderDTO {
     private Long equipmentId;
     private Long responsibleId;
 
-    public OrderDTO() {
-
-        this.description = description;
-        this.solutionDetails = solutionDetails;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.clientId = clientId;
-        this.equipmentId = equipmentId;
-        this.responsibleId = responsibleId;
-    }
+    public OrderDTO() {}
 
 }
