@@ -12,16 +12,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SwaggerConfig {
 
-    /*@Bean
-    public OpenAPI openAPI() {
-        return new OpenAPI()
-                .addSecurityItem(new SecurityRequirement().addList("basicAuth"))
-                .components(new Components().addSecuritySchemes(
-                        "basicAuth", new SecurityScheme().name("basicAuth").type(SecurityScheme.Type.HTTP).scheme("basic")
-                ));
-    }*/
-
-
     @Bean
     public OpenAPI openAPI() {
         return new OpenAPI()

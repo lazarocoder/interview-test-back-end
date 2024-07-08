@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 
 @RequestMapping(value = "/api/auth", produces = {"application/json"} )
-@Tag(name = " Endpoints for auth")
+@Tag(name = " Controller for auth")
 @ApiResponses(value = {
         @ApiResponse(responseCode = "400", description = "Bad Request"),
         @ApiResponse(responseCode = "401", description = "Unauthorized"),

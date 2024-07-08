@@ -2,16 +2,19 @@ package com.projuris.model;
 
 import com.projuris.enumerated.OrderUpdateType;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 
 
 import java.time.LocalDateTime;
 
+
+@AllArgsConstructor
 @Getter
 @Setter
+@Builder
 @Entity
+@Table(name = "order_update")
 public class OrderUpdate {
     @jakarta.persistence.Id
     @Id

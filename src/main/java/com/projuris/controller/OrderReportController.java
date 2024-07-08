@@ -2,7 +2,6 @@ package com.projuris.controller;
 
 import com.projuris.dto.OrderReportDTO;
 import com.projuris.service.OrderReportService;
-import com.projuris.service.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -19,7 +18,7 @@ import java.util.List;
 @RestController
 
 @RequestMapping(value = "api/reports", produces = {"application/json"}  )
-@Tag(name = "Endpoint of the reports")
+@Tag(name = "Controller of the reports")
 @ApiResponses(value = {
         @ApiResponse(responseCode = "400", description = "Bad Request"),
         @ApiResponse(responseCode = "401", description = "Unauthorized"),

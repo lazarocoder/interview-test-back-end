@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "api/responsibles", produces = {"application/json"}  )
-@Tag(name = "Endpoint for the responsibles ")
+@Tag(name = "Controller for the responsibles ")
 @ApiResponses(value = {
         @ApiResponse(responseCode = "400", description = "Bad Request"),
         @ApiResponse(responseCode = "401", description = "Unauthorized"),

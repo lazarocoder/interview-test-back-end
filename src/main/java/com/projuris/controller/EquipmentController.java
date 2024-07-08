@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "api/equipments", produces = {"application/json"} )
-@Tag(name = "Endpoints of the equipments")
+@Tag(name = "Controller of the equipments")
 @ApiResponses(value = {
         @ApiResponse(responseCode = "400", description = "Bad Request"),
         @ApiResponse(responseCode = "401", description = "Unauthorized"),

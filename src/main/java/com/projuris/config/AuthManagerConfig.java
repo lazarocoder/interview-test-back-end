@@ -15,17 +15,6 @@ public class AuthManagerConfig {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
-//    @Autowired
-//    public AuthManagerConfig(UserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
-//        this.userDetailsService = userDetailsService;
-//        this.passwordEncoder = passwordEncoder;
-//    }
-
-//    @Autowired
-//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
-//    }
-    
     @Autowired
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
