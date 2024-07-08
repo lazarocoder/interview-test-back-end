@@ -7,13 +7,14 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@Log
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "api/clients", produces = {"application/json"} )
@@ -38,14 +39,17 @@ public class ClientController {
     @ApiResponse(responseCode = "201", description = "CREATED")
     @PostMapping
     public ResponseEntity<ClientDTO> createClient(@RequestBody ClientDTO clientDTO) {
+        log.info("Started, registering a customer...");
         ClientDTO createdClient = clientService.createClient(clientDTO);
         return new ResponseEntity<>(createdClient, HttpStatus.CREATED);
+
     }
 
     @Operation(method = "GET", summary = "Search client", description = "Search client.")
     @ApiResponse(responseCode = "200", description = "OK")
     @GetMapping
     public ResponseEntity<List<ClientDTO>> getAllClients() {
+        log.info("Started, searching  customers...");
         List<ClientDTO> clients = clientService.getAllClients();
         return new ResponseEntity<>(clients, HttpStatus.OK);
     }

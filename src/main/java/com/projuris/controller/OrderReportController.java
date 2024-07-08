@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,9 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
+@Log
 @RestController
-
 @RequestMapping(value = "api/reports", produces = {"application/json"}  )
 @Tag(name = "Controller of the reports")
 @ApiResponses(value = {
@@ -39,6 +39,7 @@ public class OrderReportController {
     @ApiResponse(responseCode = "200", description = "OK")
     @GetMapping
     public ResponseEntity<List<OrderReportDTO>> getOrderReport() {
+        log.info("Started, searching the reports...");
         List<OrderReportDTO> orderReports = orderReportService.getOrderReport();
         return new ResponseEntity<>(orderReports, HttpStatus.OK);
     }

@@ -7,13 +7,14 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@Log
 @RestController
 @RequestMapping(value = "api/equipments", produces = {"application/json"} )
 @Tag(name = "Controller of the equipments")
@@ -38,6 +39,7 @@ public class EquipmentController {
     @ApiResponse(responseCode = "201", description = "CREATED")
     @PostMapping
     public ResponseEntity<EquipmentDTO> createEquipment(@RequestBody EquipmentDTO equipmentDTO) {
+        log.info("Started, registering a equipment...");
         EquipmentDTO createdEquipment = equipmentService.createEquipment(equipmentDTO);
         return new ResponseEntity<>(createdEquipment, HttpStatus.CREATED);
     }
@@ -46,6 +48,7 @@ public class EquipmentController {
     @ApiResponse(responseCode = "200", description = "OK")
     @GetMapping
     public ResponseEntity<List<EquipmentDTO>> getAllEquipments() {
+        log.info("Started, searching  equipments...");
         List<EquipmentDTO> equipments = equipmentService.getAllEquipments();
         return new ResponseEntity<>(equipments, HttpStatus.OK);
     }

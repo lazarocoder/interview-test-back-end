@@ -6,13 +6,14 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@Log
 @RestController
 @RequestMapping(value = "api/responsibles", produces = {"application/json"}  )
 @Tag(name = "Controller for the responsibles ")
@@ -32,10 +33,11 @@ public class ResponsibleController {
     @Autowired
     private ResponsibleService responsibleService;
 
-    @Operation(method = "POST", summary = "Register a responsibles", description = "Register a responsibles.")
+    @Operation(method = "POST", summary = "Register  responsibles", description = "Register  responsibles.")
     @ApiResponse(responseCode = "201", description = "CREATED")
     @PostMapping
     public ResponseEntity<ResponsibleDTO> createResponsible(@RequestBody ResponsibleDTO responsibleDTO) {
+        log.info("Started, registering responsibles...");
         ResponsibleDTO createdResponsible = responsibleService.createResponsible(responsibleDTO);
         return new ResponseEntity<>(createdResponsible, HttpStatus.CREATED);
     }
@@ -44,6 +46,7 @@ public class ResponsibleController {
     @ApiResponse(responseCode = "200", description = "OK")
     @GetMapping
     public ResponseEntity<List<ResponsibleDTO>> getAllResponsibles() {
+        log.info("Started, searching the responsibles...");
         List<ResponsibleDTO> responsibles = responsibleService.getAllResponsibles();
         return new ResponseEntity<>(responsibles, HttpStatus.OK);
     }

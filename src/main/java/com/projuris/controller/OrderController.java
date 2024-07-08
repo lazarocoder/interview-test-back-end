@@ -7,13 +7,14 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@Log
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "api/orders", produces = {"application/json"}  )
@@ -38,6 +39,7 @@ public class OrderController {
     @ApiResponse(responseCode = "201", description = "CREATED")
     @PostMapping
     public ResponseEntity<OrderDTO> createOrder(@RequestBody OrderDTO orderDTO) {
+        log.info("Started, registering a order...");
         OrderDTO createdOrder = orderService.createOrder(orderDTO);
         return new ResponseEntity<>(createdOrder, HttpStatus.CREATED);
     }
@@ -46,6 +48,7 @@ public class OrderController {
     @ApiResponse(responseCode = "200", description = "OK")
     @GetMapping("/responsible/{id}")
     public ResponseEntity<List<OrderDTO>> getOrdersByResponsible(@PathVariable Long id) {
+        log.info("Started, searching a order...");
         List<OrderDTO> orders = orderService.getOrdersByResponsible(id);
         return new ResponseEntity<>(orders, HttpStatus.OK);
     }
@@ -53,6 +56,7 @@ public class OrderController {
     @ApiResponse(responseCode = "200", description = "OK")
     @PutMapping("/{id}")
     public ResponseEntity<OrderDTO> updateOrder(@PathVariable Long id, @RequestBody OrderDTO orderDTO) {
+        log.info("Started, updating a order...");
         OrderDTO updatedOrder = orderService.updateOrder(id, orderDTO);
         return new ResponseEntity<>(updatedOrder, HttpStatus.OK);
     }

@@ -6,11 +6,12 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+@Log
 @RestController
 @RequestMapping(value = "api/orders/{orderId}/updates", produces = {"application/json"}  )
     @Tag(name = "Controller of the order and update")
@@ -36,6 +37,7 @@ public class OrderUpdateController {
     public ResponseEntity<OrderUpdateDTO> createOrderUpdate(
             @PathVariable Long orderId,
             @RequestBody OrderUpdateDTO orderUpdateDTO) {
+        log.info("Started, updating order...");
         OrderUpdateDTO createdOrderUpdate = orderUpdateService.createOrderUpdate(orderId, orderUpdateDTO);
         return new ResponseEntity<>(createdOrderUpdate, HttpStatus.CREATED);
     }
